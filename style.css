@@ -1,0 +1,157 @@
+#page-info-bottom-bar {
+  position: fixed !important;
+  left: var(--page-info-bar-left, 0) !important;
+  right: auto !important;
+  width: var(--page-info-bar-width, 100vw) !important;
+  bottom: 0 !important;
+  z-index: 2147483647 !important;
+  box-sizing: border-box !important;
+  min-height: 22px !important;
+  padding: 0 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  background: rgba(18, 18, 18, 0.92) !important;
+  color: #f2f2f2 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 22px !important;
+  text-align: left !important;
+  direction: ltr !important;
+  pointer-events: none !important;
+}
+
+#page-info-bottom-bar .page-info-item,
+#page-info-bottom-bar .page-info-separator,
+#page-info-bottom-bar .page-info-url-wrap,
+#page-info-bottom-bar .page-info-url-label,
+#page-info-bottom-bar .page-info-url,
+#page-info-bottom-bar .page-info-metrics,
+#page-info-bottom-bar span {
+  box-sizing: border-box !important;
+  min-width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  font: inherit !important;
+  line-height: inherit !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+#page-info-bottom-bar [data-copy-field] {
+  cursor: copy !important;
+  pointer-events: auto !important;
+}
+
+#page-info-bottom-bar .page-info-url-wrap {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  pointer-events: auto !important;
+}
+
+#page-info-bottom-bar .page-info-url-label {
+  display: inline !important;
+  opacity: 0.72 !important;
+}
+
+#page-info-bottom-bar .page-info-url {
+  display: inline-block !important;
+  width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  vertical-align: top !important;
+  opacity: 0 !important;
+  transition: width 120ms ease, opacity 120ms ease !important;
+}
+
+#page-info-bottom-bar .page-info-url-wrap:hover .page-info-url {
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+#page-info-bottom-bar .page-info-url-wrap:hover .page-info-url-label {
+  display: none !important;
+}
+
+#page-info-bottom-bar .page-info-metrics {
+  display: flex !important;
+  flex: 0 1 auto !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+#page-info-bottom-bar .page-info-item {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+#page-info-bottom-bar .page-info-separator {
+  flex: 0 0 auto !important;
+  opacity: 0.5 !important;
+}
+
+@media (max-width: 640px), (hover: none) {
+  #page-info-bottom-bar {
+    min-height: 36px !important;
+    padding: 2px 8px !important;
+    flex-wrap: wrap !important;
+    align-content: center !important;
+    align-items: center !important;
+    gap: 0 8px !important;
+    font-size: 11px !important;
+    line-height: 16px !important;
+    white-space: normal !important;
+  }
+
+  #page-info-bottom-bar .page-info-url-wrap {
+    flex: 1 1 100% !important;
+    height: 16px !important;
+    white-space: nowrap !important;
+  }
+
+  #page-info-bottom-bar .page-info-url-label {
+    display: none !important;
+  }
+
+  #page-info-bottom-bar .page-info-url,
+  #page-info-bottom-bar .page-info-url-wrap:hover .page-info-url {
+    width: 100% !important;
+    opacity: 0.86 !important;
+  }
+
+  #page-info-bottom-bar .page-info-metrics {
+    flex: 1 1 100% !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    white-space: nowrap !important;
+  }
+
+  #page-info-bottom-bar .page-info-separator {
+    opacity: 0.35 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  #page-info-bottom-bar .page-info-metrics {
+    justify-content: flex-start !important;
+    overflow-x: hidden !important;
+  }
+
+  #page-info-bottom-bar .page-info-item {
+    max-width: 34vw !important;
+  }
+}
